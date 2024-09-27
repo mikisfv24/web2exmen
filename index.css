@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: 50px 100px auto;
+    grid-gap: 10px;
+}
+
+.azul {
+    grid-row: 1;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+}
+
+.rojo {
+    grid-row: 2;
+    background-color: lightcoral;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 10px;
+}
+
+.verde1, .verde2, .verde3, .plomo, .naranja1, .naranja2 {
+    text-align: center;
+    line-height: 150px;
+    font-size: 18px;
+}
+
+.verde1 {
+    background-color: lightgreen;
+    
+}
+.verde1 img{
+    width: 100%;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.verde2 {
+    background-color: lightgreen;
+}
+.verde2 img{
+    width: 100%;
+    height: 150px;
+    margin-right: 20px;
+}
+.verde3 {
+    background-color: lightgreen;
+}
+.verde3 img{
+    width: 100%;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.plomo {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    background-color: lightgray;
+    line-height: 300px;
+}
+@keyframes backgroundChanges{
+    0%{background-color: white;}
+    50%{background-color: lightblue;}
+    75%{background-color: cornflowerblue;}
+    100%{background-color: white;}
+}
+.plomo{
+    animation: backgroundChanges 3s infinite;
+}
+
+.naranja1 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    background-color: orange;
+}
+@keyframes moveRight{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(100);}
+    100%{transform: translateX(10);}
+}
+.naranja1{
+    animation: moveRight 15s infinite;
+}
+
+.naranja2 {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    background-color: orange;
+}
+@keyframes moveDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(100px); }
+}
+
+.naranja2{
+    width: 100%;
+    height: 100px;
+    background-color: orange;
+    animation: moveDown 3s infinite;
+}
